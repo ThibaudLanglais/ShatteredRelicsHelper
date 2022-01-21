@@ -28,6 +28,17 @@ main{
    max-width: 100%;
    position: relative;
 }
+.selection button{
+  font-size: 1.5rem;
+  background: #ddd;
+  margin-bottom: 15px;
+  border: 0;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.selection button:hover{
+  filter: brightness(1.1);
+}
 #search-frags, #search-sets{
   width: 100%;
   padding: 10px;
