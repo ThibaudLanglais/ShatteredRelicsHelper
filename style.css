@@ -14,7 +14,7 @@ body{
    background: var(--bg);
    color: var(--primary);
    display: flex;
-   justify-content: flex-start;
+   justify-content: space-between;
    align-items: center;
    min-height: 100vh;
    padding: 50px 30px;
@@ -83,7 +83,10 @@ footer a:hover{
    height: fit-content;
 }
 .set-item.active{
-   background: green;
+  background: green;
+}
+.set-item.active.orange{
+  background: orange;
 }
  
  .switch {

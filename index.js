@@ -7,6 +7,7 @@ const unselectAll = document.querySelector('.unselect-all')
 
 var inputList = []
 var setsList = []
+var sets
 var save = getCookie('save') ? JSON.parse(getCookie('save')) : {}
 
 tippy("footer a", {
@@ -16,7 +17,7 @@ tippy("footer a", {
 fetch('./sets.json').then(res => res.json()).then(res => init(res[0])).catch(err => console.log(err))
 
 function init(data){
-   var sets = data.sets
+   sets = data.sets
    var fragmentsList = data.fragments
 
    createFragmentsHTML(fragmentsList)
@@ -68,7 +69,7 @@ function createFragmentsHTML(fragmentsList){
       label.appendChild(span1)
       label.appendChild(span2)
       inputList.push(input)
-      input.addEventListener('input', updateSets)
+      input.addEventListener('input', ()=>updateSets(sets))
    })
 }
 
@@ -90,9 +91,11 @@ function createSetsHTML(sets){
 
 function updateSets(sets){
    sets.forEach((set, i)=>{
-      const res = inputList.filter(el => el.checked && set.fragments.indexOf(el.name) != -1)
+      var setFrags = set.fragments
+      setFrags.forEach((frag, i)=>setFrags[i] = setFrags[i].toLowerCase())
+      const res = inputList.filter(el => el.checked && setFrags.indexOf(el.name.toLowerCase()) != -1)
       res.forEach((el, i)=>{
-         res[i] = el.name
+         res[i] = el.name.toLowerCase()
       })
       if(set.levels != undefined){
          setsList[i].classList.remove('active')
@@ -112,9 +115,14 @@ function updateSets(sets){
          setsList[i].textContent = setsList[i].dataset.name
          setsList[i].classList.remove('active')
       }
+      if(res.length == set.fragments.length-1){
+         setsList[i].classList.add('orange')
+      }else{
+         setsList[i].classList.remove('orange')
+      }
       var instanceContent = ''
       set.fragments.forEach(fragment=>{
-         instanceContent += res.indexOf(fragment) == -1 ? `<span style="font-size:1rem!important;display: block;color: red">${fragment}</span>` : `<span style="font-size:1rem!important;display: block;color: green">${fragment}</span>`
+         instanceContent += res.indexOf(fragment.toLowerCase()) == -1 ? `<span style="font-size:1rem!important;display: block;color: red">${fragment}</span>` : `<span style="font-size:1rem!important;display: block;color: green">${fragment}</span>`
       })
       set.tippyInstance[0].setContent(instanceContent)
    })
