@@ -14,11 +14,12 @@ body{
    background: var(--bg);
    color: var(--primary);
    display: flex;
-   justify-content: center;
-   align-items: flex-start;
+   justify-content: flex-start;
+   align-items: center;
    min-height: 100vh;
    padding: 50px 30px;
    text-transform: uppercase;
+   flex-direction: column;
 }
 main{
    padding-top: 16px;
@@ -27,6 +28,16 @@ main{
    width: 1440px;
    max-width: 100%;
    position: relative;
+}
+footer{
+  margin-top: 40px;
+}
+footer a{
+  text-decoration: none;
+  color: cornflowerblue;
+}
+footer a:hover{
+  filter: brightness(1.1);
 }
 .selection button{
   font-size: 1.5rem;

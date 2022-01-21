@@ -9,6 +9,10 @@ var inputList = []
 var setsList = []
 var save = getCookie('save') ? JSON.parse(getCookie('save')) : {}
 
+tippy("footer a", {
+   content: "Visit my Github profile !"
+})
+
 fetch('./sets.json').then(res => res.json()).then(res => init(res[0])).catch(err => console.log(err))
 
 function init(data){
