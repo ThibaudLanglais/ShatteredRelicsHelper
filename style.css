@@ -85,7 +85,7 @@ footer a:hover{
 .set-item.active{
   background: green;
 }
-.set-item.active.orange{
+.set-item.orange{
   background: orange;
 }
  

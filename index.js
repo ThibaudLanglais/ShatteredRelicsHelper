@@ -91,6 +91,8 @@ function createSetsHTML(sets){
 
 function updateSets(sets){
    sets.forEach((set, i)=>{
+      setsList[i].classList.remove('orange')
+      setsList[i].classList.remove('active')
       var setFrags = set.fragments
       setFrags.forEach((frag, i)=>setFrags[i] = setFrags[i].toLowerCase())
       const res = inputList.filter(el => el.checked && setFrags.indexOf(el.name.toLowerCase()) != -1)
@@ -98,16 +100,16 @@ function updateSets(sets){
          res[i] = el.name.toLowerCase()
       })
       if(set.levels != undefined){
-         setsList[i].classList.remove('active')
          var activeLevel
-         set.levels.sort((a, b) => parseInt(a.label) > parseInt(b.label) ? 1 : -1).forEach(level=>{
+         set.levels.sort((a, b) => parseInt(a.label) > parseInt(b.label) ? 1 : -1).forEach((level, iSet)=>{
             if(res.length >= level.required){
-               set.tippyInstance[0].setContent("Active")
                setsList[i].classList.add('active')
                activeLevel = level.label
+            }else if(res.length == level.required-1 && iSet == 0){
+               setsList[i].classList.add('orange')
             }
          })
-         setsList[i].textContent = `${setsList[i].dataset.name} ${activeLevel ? `(${activeLevel})` : ''}` 
+         setsList[i].textContent = `${setsList[i].dataset.name} ${activeLevel && activeLevel != 0 ? `(${activeLevel})` : ''}` 
       }else if(res.length == set.fragments.length){
          setsList[i].textContent = setsList[i].dataset.name
          setsList[i].classList.add('active')
@@ -115,16 +117,11 @@ function updateSets(sets){
          setsList[i].textContent = setsList[i].dataset.name
          setsList[i].classList.remove('active')
       }
-      if(res.length == set.fragments.length-1){
-         setsList[i].classList.add('orange')
-      }else{
-         setsList[i].classList.remove('orange')
-      }
       var instanceContent = ''
       set.fragments.forEach(fragment=>{
          instanceContent += res.indexOf(fragment.toLowerCase()) == -1 ? `<span style="font-size:1rem!important;display: block;color: red">${fragment}</span>` : `<span style="font-size:1rem!important;display: block;color: green">${fragment}</span>`
       })
-      set.tippyInstance[0].setContent(instanceContent)
+      set.tippyInstance[0].setContent(instanceContent)   
    })
    inputList.forEach(input => {
       save[input.name] = input.checked
