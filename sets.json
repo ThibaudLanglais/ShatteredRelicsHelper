@@ -159,166 +159,164 @@
          "required": 3
       }]
    }],
-   "fragments": [
-      {
-         "name":"Alchemaniac",
-         "image":"https://oldschool.runescape.wiki/images/Alchemaniac.png"
-      }, {
-         "name":"Arcane Conduit",
-         "image":"https://oldschool.runescape.wiki/images/Arcane_Conduit.png"
-      }, {
-         "name":"Armadylean Decree",
-         "image":"https://oldschool.runescape.wiki/images/Armadylean_Decree.png"
-      }, {
-         "name":"Bandosian Might",
-         "image":"https://oldschool.runescape.wiki/images/Bandosian_Might.png"
-      }, {
-         "name":"Barbarian Pest Wars",
-         "image":"https://oldschool.runescape.wiki/images/Barbarian_Pest_Wars.png"
-      }, {
-         "name":"Bottomless Quiver",
-         "image":"https://oldschool.runescape.wiki/images/Bottomless_Quiver.png"
-      }, {
-         "name":"Catch of the day",
-         "image":"https://oldschool.runescape.wiki/images/Catch_of_the_day.png"
-      }, {
-         "name":"Certified Farmer",
-         "image":"https://oldschool.runescape.wiki/images/Certified_Farmer.png"
-      }, {
-         "name":"Chef's Catch",
-         "image":"https://oldschool.runescape.wiki/images/Chef's_Catch.png"
-      }, {
-         "name":"Chinchonkers",
-         "image":"https://oldschool.runescape.wiki/images/Chinchonkers.png"
-      }, {
-         "name":"Clued In",
-         "image":"https://oldschool.runescape.wiki/images/Clued_In.png"
-      }, {
-         "name":"Deeper Pockets",
-         "image":"https://oldschool.runescape.wiki/images/Deeper_Pockets.png"
-      }, {
-         "name":"Dine & Dash",
-         "image":"https://oldschool.runescape.wiki/images/Dine_%26_Dash.png"
-      }, {
-         "name":"Divine Restoration",
-         "image":"https://oldschool.runescape.wiki/images/Divine_Restoration.png"
-      }, {
-         "name":"Dragon On A Bit",
-         "image":"https://oldschool.runescape.wiki/images/Dragon_On_A_Bit.png"
-      }, {
-         "name":"Enchanted Jeweler",
-         "image":"https://oldschool.runescape.wiki/images/Enchanted_Jeweler.png"
-      }, {
-         "name":"Golden Brick Road",
-         "image":"https://oldschool.runescape.wiki/images/Golden_Brick_Road.png"
-      }, {
-         "name":"Grave Robber",
-         "image":"https://oldschool.runescape.wiki/images/Grave_Robber.png"
-      }, {
-         "name":"Homewrecker",
-         "image":"https://oldschool.runescape.wiki/images/Homewrecker.png"
-      }, {
-         "name":"Hot On The Trail",
-         "image":"https://oldschool.runescape.wiki/images/Hot_On_The_Trail.png"
-      }, {
-         "name":"Imcando's Apprentice",
-         "image":"https://oldschool.runescape.wiki/images/Imcando's_Apprentice.png"
-      }, {
-         "name":"Just Druid!",
-         "image":"https://oldschool.runescape.wiki/images/Just_Druid.png"
-      }, {
-         "name":"Larger Recharger",
-         "image":"https://oldschool.runescape.wiki/images/Larger_Recharger.png"
-      }, {
-         "name":"Livin' On A Prayer",
-         "image":"https://oldschool.runescape.wiki/images/Livin'_On_A_Prayer.png"
-      }, {
-         "name":"Message In A Bottle",
-         "image":"https://oldschool.runescape.wiki/images/Message_In_A_Bottle.png"
-      }, {
-         "name":"Mixologist",
-         "image":"https://oldschool.runescape.wiki/images/Mixologist.png"
-      }, {
-         "name":"Molten Miner",
-         "image":"https://oldschool.runescape.wiki/images/Molten_Miner.png"
-      }, {
-         "name":"Mother's Magic Fossils",
-         "image":"https://oldschool.runescape.wiki/images/Mother's_Magic_Fossils.png"
-      }, {
-         "name":"Plank Stretcher",
-         "image":"https://oldschool.runescape.wiki/images/Plank_Stretcher.png"
-      }, {
-         "name":"Praying Respects",
-         "image":"https://oldschool.runescape.wiki/images/Praying_Respects.png"
-      }, {
-         "name":"Pro Tips",
-         "image":"https://oldschool.runescape.wiki/images/Pro_Tips.png"
-      }, {
-         "name":"Profletchional",
-         "image":"https://oldschool.runescape.wiki/images/Profletchional.png"
-      }, {
-         "name":"Rock Solid",
-         "image":"https://oldschool.runescape.wiki/images/Rock_Solid.png"
-      }, {
-         "name":"Rogues' Chompy Farm",
-         "image":"https://oldschool.runescape.wiki/images/Rogues'_Chompy_Farm.png"
-      }, {
-         "name":"Rooty Tooty 2x Runeys",
-         "image":"https://oldschool.runescape.wiki/images/Rooty_Tooty_2x_Runeys.png"
-      }, {
-         "name":"Rumple-Bow-String",
-         "image":"https://oldschool.runescape.wiki/images/Rumple-Bow-String.png"
-      }, {
-         "name":"Rune Escape",
-         "image":"https://oldschool.runescape.wiki/images/Rune_Escape.png"
-      }, {
-         "name":"Saradominist Defence",
-         "image":"https://oldschool.runescape.wiki/images/Saradominist_Defence.png"
-      }, {
-         "name":"Seedy Business",
-         "image":"https://oldschool.runescape.wiki/images/Seedy_Business.png"
-      }, {
-         "name":"Slash & Burn",
-         "image":"https://oldschool.runescape.wiki/images/Slash_%26_Burn.png"
-      }, {
-         "name":"Slay 'n' Pay",
-         "image":"https://oldschool.runescape.wiki/images/Slay_'n'_Pay.png"
-      }, {
-         "name":"Slay All Day",
-         "image":"https://oldschool.runescape.wiki/images/Slay_All_Day.png"
-      }, {
-         "name":"Smithing Double",
-         "image":"https://oldschool.runescape.wiki/images/Smithing_Double.png"
-      }, {
-         "name":"Smooth Criminal",
-         "image":"https://oldschool.runescape.wiki/images/Smooth_Criminal.png"
-      }, {
-         "name":"Special Discount",
-         "image":"https://oldschool.runescape.wiki/images/Special_Discount.png"
-      }, {
-         "name":"Superior Tracking",
-         "image":"https://oldschool.runescape.wiki/images/Superior_Tracking.png"
-      }, {
-         "name":"Tactical Duelist",
-         "image":"https://oldschool.runescape.wiki/images/Tactical_Duelist.png"
-      }, {
-         "name":"Thrall Damage",
-         "image":"https://oldschool.runescape.wiki/images/Thrall_Damage.png"
-      }, {
-         "name":"Unholy Ranger",
-         "image":"https://oldschool.runescape.wiki/images/Unholy_Ranger.png"
-      }, {
-         "name":"Unholy Warrior",
-         "image":"https://oldschool.runescape.wiki/images/Unholy_Warrior.png"
-      }, {
-         "name":"Unholy Wizard",
-         "image":"https://oldschool.runescape.wiki/images/Unholy_Wizard.png"
-      }, {
-         "name":"Venomaster",
-         "image":"https://oldschool.runescape.wiki/images/Venomaster.png"
-      }, {
-         "name":"Zamorakian Sight"
-         "image":"https://oldschool.runescape.wiki/images/Zamorakian_Sight.png"
-      }
-   ]
+   "fragments": [{
+      "name": "Alchemaniac",
+      "image": "https://oldschool.runescape.wiki/images/Alchemaniac.png"
+   }, {
+      "name": "Arcane Conduit",
+      "image": "https://oldschool.runescape.wiki/images/Arcane_Conduit.png"
+   }, {
+      "name": "Armadylean Decree",
+      "image": "https://oldschool.runescape.wiki/images/Armadylean_Decree.png"
+   }, {
+      "name": "Bandosian Might",
+      "image": "https://oldschool.runescape.wiki/images/Bandosian_Might.png"
+   }, {
+      "name": "Barbarian Pest Wars",
+      "image": "https://oldschool.runescape.wiki/images/Barbarian_Pest_Wars.png"
+   }, {
+      "name": "Bottomless Quiver",
+      "image": "https://oldschool.runescape.wiki/images/Bottomless_Quiver.png"
+   }, {
+      "name": "Catch Of The Day",
+      "image": "https://oldschool.runescape.wiki/images/Catch_Of_The_Day.png"
+   }, {
+      "name": "Certified Farmer",
+      "image": "https://oldschool.runescape.wiki/images/Certified_Farmer.png"
+   }, {
+      "name": "Chef's Catch",
+      "image": "https://oldschool.runescape.wiki/images/Chef's_Catch.png"
+   }, {
+      "name": "Chinchonkers",
+      "image": "https://oldschool.runescape.wiki/images/Chinchonkers.png"
+   }, {
+      "name": "Clued In",
+      "image": "https://oldschool.runescape.wiki/images/Clued_In.png"
+   }, {
+      "name": "Deeper Pockets",
+      "image": "https://oldschool.runescape.wiki/images/Deeper_Pockets.png"
+   }, {
+      "name": "Dine & Dash",
+      "image": "https://oldschool.runescape.wiki/images/Dine_%26_Dash.png"
+   }, {
+      "name": "Divine Restoration",
+      "image": "https://oldschool.runescape.wiki/images/Divine_Restoration.png"
+   }, {
+      "name": "Dragon On A Bit",
+      "image": "https://oldschool.runescape.wiki/images/Dragon_On_A_Bit.png"
+   }, {
+      "name": "Enchanted Jeweler",
+      "image": "https://oldschool.runescape.wiki/images/Enchanted_Jeweler.png"
+   }, {
+      "name": "Golden Brick Road",
+      "image": "https://oldschool.runescape.wiki/images/Golden_Brick_Road.png"
+   }, {
+      "name": "Grave Robber",
+      "image": "https://oldschool.runescape.wiki/images/Grave_Robber.png"
+   }, {
+      "name": "Homewrecker",
+      "image": "https://oldschool.runescape.wiki/images/Homewrecker.png"
+   }, {
+      "name": "Hot On The Trail",
+      "image": "https://oldschool.runescape.wiki/images/Hot_On_The_Trail.png"
+   }, {
+      "name": "Imcando's Apprentice",
+      "image": "https://oldschool.runescape.wiki/images/Imcando's_Apprentice.png"
+   }, {
+      "name": "Just Druid!",
+      "image": "https://oldschool.runescape.wiki/images/Just_Druid.png"
+   }, {
+      "name": "Larger Recharger",
+      "image": "https://oldschool.runescape.wiki/images/Larger_Recharger.png"
+   }, {
+      "name": "Livin' On A Prayer",
+      "image": "https://oldschool.runescape.wiki/images/Livin'_On_A_Prayer.png"
+   }, {
+      "name": "Message In A Bottle",
+      "image": "https://oldschool.runescape.wiki/images/Message_In_A_Bottle.png"
+   }, {
+      "name": "Mixologist",
+      "image": "https://oldschool.runescape.wiki/images/Mixologist.png"
+   }, {
+      "name": "Molten Miner",
+      "image": "https://oldschool.runescape.wiki/images/Molten_Miner.png"
+   }, {
+      "name": "Mother's Magic Fossils",
+      "image": "https://oldschool.runescape.wiki/images/Mother's_Magic_Fossils.png"
+   }, {
+      "name": "Plank Stretcher",
+      "image": "https://oldschool.runescape.wiki/images/Plank_Stretcher.png"
+   }, {
+      "name": "Praying Respects",
+      "image": "https://oldschool.runescape.wiki/images/Praying_Respects.png"
+   }, {
+      "name": "Pro Tips",
+      "image": "https://oldschool.runescape.wiki/images/Pro_Tips.png"
+   }, {
+      "name": "Profletchional",
+      "image": "https://oldschool.runescape.wiki/images/Profletchional.png"
+   }, {
+      "name": "Rock Solid",
+      "image": "https://oldschool.runescape.wiki/images/Rock_Solid.png"
+   }, {
+      "name": "Rogues' Chompy Farm",
+      "image": "https://oldschool.runescape.wiki/images/Rogues'_Chompy_Farm.png"
+   }, {
+      "name": "Rooty Tooty 2x Runeys",
+      "image": "https://oldschool.runescape.wiki/images/Rooty_Tooty_2x_Runeys.png"
+   }, {
+      "name": "Rumple-Bow-String",
+      "image": "https://oldschool.runescape.wiki/images/Rumple-Bow-String.png"
+   }, {
+      "name": "Rune Escape",
+      "image": "https://oldschool.runescape.wiki/images/Rune_Escape.png"
+   }, {
+      "name": "Saradominist Defence",
+      "image": "https://oldschool.runescape.wiki/images/Saradominist_Defence.png"
+   }, {
+      "name": "Seedy Business",
+      "image": "https://oldschool.runescape.wiki/images/Seedy_Business.png"
+   }, {
+      "name": "Slash & Burn",
+      "image": "https://oldschool.runescape.wiki/images/Slash_%26_Burn.png"
+   }, {
+      "name": "Slay 'n' Pay",
+      "image": "https://oldschool.runescape.wiki/images/Slay_'n'_Pay.png"
+   }, {
+      "name": "Slay All Day",
+      "image": "https://oldschool.runescape.wiki/images/Slay_All_Day.png"
+   }, {
+      "name": "Smithing Double",
+      "image": "https://oldschool.runescape.wiki/images/Smithing_Double.png"
+   }, {
+      "name": "Smooth Criminal",
+      "image": "https://oldschool.runescape.wiki/images/Smooth_Criminal.png"
+   }, {
+      "name": "Special Discount",
+      "image": "https://oldschool.runescape.wiki/images/Special_Discount.png"
+   }, {
+      "name": "Superior Tracking",
+      "image": "https://oldschool.runescape.wiki/images/Superior_Tracking.png"
+   }, {
+      "name": "Tactical Duelist",
+      "image": "https://oldschool.runescape.wiki/images/Tactical_Duelist.png"
+   }, {
+      "name": "Thrall Damage",
+      "image": "https://oldschool.runescape.wiki/images/Thrall_Damage.png"
+   }, {
+      "name": "Unholy Ranger",
+      "image": "https://oldschool.runescape.wiki/images/Unholy_Ranger.png"
+   }, {
+      "name": "Unholy Warrior",
+      "image": "https://oldschool.runescape.wiki/images/Unholy_Warrior.png"
+   }, {
+      "name": "Unholy Wizard",
+      "image": "https://oldschool.runescape.wiki/images/Unholy_Wizard.png"
+   }, {
+      "name": "Venomaster",
+      "image": "https://oldschool.runescape.wiki/images/Venomaster.png"
+   }, {
+      "name": "Zamorakian Sight",
+      "image": "https://oldschool.runescape.wiki/images/Zamorakian_Sight.png"
+   }]
 }]

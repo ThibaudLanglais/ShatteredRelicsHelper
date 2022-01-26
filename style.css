@@ -254,14 +254,14 @@ main {
    max-height: 500px;
 }
 
-.frags .search-unselect {
+.frags-container .search-unselect {
    grid-column: 1/3;
    display: flex;
    gap: 10px;
    margin-bottom: 20px;
 }
 
-.frags .search-unselect input {
+.frags-container .search-unselect input {
    outline: none;
    flex: 1;
    padding: 10px;
@@ -271,15 +271,24 @@ main {
    border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
-.frags .search-unselect button {
+.state-container {
+   position: relative;
+}
+
+.unselect-all {
    background: var(--dark);
    display: flex;
    justify-content: center;
    align-items: center;
    border: 1px solid rgba(255, 255, 255, 0.6);
    cursor: pointer;
-   min-height: 100%;
    padding: 10px;
+   position: absolute;
+   right: 0;
+   top: 50%;
+   transform: translate(50%, -50%);
+   height: 50px;
+   width: 50px;
 }
 
 .frags .fragment-name {

@@ -14,7 +14,8 @@ const deletePreset = document.querySelector('.sets .actions-bar .delete')
 var toggleList = []
 var setsList = []
 var activeFragments = []
-var fragmentsList;
+var fragmentsList = [];
+var fragmentsImages = []
 var sets
 var unselectAll
 var presetsList = []
@@ -24,7 +25,6 @@ var save = getCookie('save') ? JSON.parse(getCookie('save')) : {}
 if(save.activeFragments) activeFragments = save.activeFragments
 if(save.presetsList) presetsList = save.presetsList
 if(save.activePreset) activePreset = save.activePreset
-console.log(save);
 
 tippy("footer a", {
    content: "Visit my Github profile !"
@@ -34,19 +34,22 @@ fetch('./sets.json').then(res => res.json()).then(res => init(res[0])).catch(err
 
 function init(data){
    sets = data.sets
-   fragmentsList = data.fragments
+   data.fragments.forEach((frag)=>{
+      fragmentsList.push(frag.name)
+      fragmentsImages.push(frag.image)
+   })
 
    createFragmentsHTML(fragmentsList)
    toggleList = document.querySelectorAll('.frags .toggle')
    toggleList.forEach((toggle, i)=>{
       toggle.addEventListener('click', ()=>{
-         if(activeFragments.indexOf(fragmentsList[i]) == -1 && activeFragments.length < 7){
+         if(activeFragments.indexOf(fragmentsList[i].toLowerCase()) == -1 && activeFragments.length < 7){
             // Adding
-            activeFragments.push(fragmentsList[i])
+            activeFragments.push(fragmentsList[i].toLowerCase())
             toggle.classList.add('active')
          }else{
             // Deleting
-            activeFragments = activeFragments.filter(el => el != fragmentsList[i])
+            activeFragments = activeFragments.filter(el => el != fragmentsList[i].toLowerCase())
             toggle.classList.remove('active')
          }
          updateTopBar()
@@ -64,8 +67,9 @@ function init(data){
          onShown: ()=>{
             const btn = document.querySelector('.activate-set') 
             btn.addEventListener('click', (e)=>{
-               activeFragments = []
-               activeFragments = [...sets[btn.dataset.index].fragments].slice(0, 7)
+               const tmp = [...sets[btn.dataset.index].fragments].slice(0, 7 - activeFragments.length);
+               tmp.forEach(el=>activeFragments.push(el))
+               console.log(activeFragments);
                updateSets()
                updateTopBar()
                updateToggles()
@@ -185,7 +189,9 @@ function init(data){
    })
    unselectAll = document.querySelector('.unselect-all')
    unselectAll.addEventListener('click', () => _unselectAll())
-
+   tippy(unselectAll, {
+      content: 'Unselect all'
+   })
    if(presetsList.length != 0){
       presetsList.forEach(preset=>{
          const option = new Option(preset.name, preset.id, false, activePreset != null ? activePreset.id == preset.id ? true : false : false)
@@ -215,7 +221,8 @@ function updateTopBar(){
    topBar.innerHTML = ''
    activeFragments.forEach((activeFragment, i)=>{
       var index = fragmentsList.indexOf(activeFragment)
-      topBar.innerHTML += `<img src="${index != -1 && fragmentsList[index].name != undefined ? fragmentsList[index].name : 'https://oldschool.runescape.wiki/images/Saradominist_Defence.png?d7645' }">`
+      // topBar.innerHTML += `<img src="${index != -1 && fragmentsList[index].name != undefined ? fragmentsList[index].name : 'https://oldschool.runescape.wiki/images/Saradominist_Defence.png?d7645' }">`
+      topBar.innerHTML += `<img src="${fragmentsImages[i]}">`
    })
    for (let index = 0; index < 7 - activeFragments.length; index++) {
       topBar.innerHTML += `<div class="placeholder"></div>`
