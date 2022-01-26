@@ -1,28 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Shattered Relics Simulator</title>
-   <link rel="stylesheet" href="style.css">
-   <script defer src="https://unpkg.com/@popperjs/core@2"></script>
-   <script defer src="https://unpkg.com/tippy.js@6"></script>
-   <script src="index.js" defer></script>
-</head>
-<body>
-   <main>
-      <div class="fragments-container">
-         <input type="text" name="search-frags"  placeholder="Search fragments" id="search-frags">
-         <div class="selection">
-            <button class="select-all" type="button">select all</button>
-            <button class="unselect-all" type="button">unselect all</button>
-         </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Runesets</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="https://unpkg.com/@popperjs/core@2"></script>
+    <script defer src="https://unpkg.com/tippy.js@6"></script>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="popup-infos">
+      <div class="inner">
+        <div class="frag-info"></div>
+        <div class="set-info">
+          <h1 class="set-title"></h1>
+          <p class="set-description"></p>
+          <div class="img-levels">
+            <img class="set-img" src="" alt="" />
+            <div class="levels">
+              <div class="head">
+                <h2>Level</h2>
+                <h2>Required fragments</h2>
+              </div>
+              <div class="body"></div>
+            </div>
+          </div>
+        </div>
+        <button class="close">Close</button>
       </div>
-      <div class="sets-container">
-         <input type="text" name="search-sets" placeholder="Search sets"  id="search-sets">
+    </div>
+    <header>
+      <div class="inner">
+        <img src="new_logo.png" alt="Runesets logo" />
       </div>
-   </main>
-   <footer>Made with ❤ by <a target="blank" href="https://github.com/ThibaudLanglais">Thibaud Langlais</a></footer>
-</body>
+    </header>
+    <main>
+      <div class="set-state"></div>
+      <div class="frags-sets">
+        <div class="frags">
+          <div class="search-unselect">
+            <input
+              type="text"
+              placeholder="Search fragments"
+              name="search-frags"
+              id="search-frags"
+            />
+            <button title="Unselect all fragments" class="unselect-all">
+              <img src="empty.png" alt="Unselect all fragments" />
+            </button>
+          </div>
+        </div>
+        <div class="sets">
+          <div class="actions-bar">
+            <select id="presets">
+              <option value="no-preset">No selected preset</option>
+            </select>
+            <div class="buttons">
+              <button class="add">
+                <img src="add.png" alt="Add preset" />
+              </button>
+              <button class="edit">
+                <img src="edit.png" alt="Edit preset" />
+              </button>
+              <button class="save">
+                <img src="save.png" alt="Save preset" />
+              </button>
+              <button class="delete">
+                <img src="delete.png" alt="Delete preset" />
+              </button>
+            </div>
+          </div>
+          <div class="show-active">
+            <input type="checkbox" id="show-active" />
+            <label for="show-active">Only show activated sets</label>
+          </div>
+          <div class="sets-list"></div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
 </html>
