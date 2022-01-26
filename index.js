@@ -67,9 +67,16 @@ function init(data){
          onShown: ()=>{
             const btn = document.querySelector('.activate-set') 
             btn.addEventListener('click', (e)=>{
-               const tmp = [...sets[btn.dataset.index].fragments].slice(0, 7 - activeFragments.length);
-               tmp.forEach(el=>activeFragments.push(el))
-               console.log(activeFragments);
+               var tmp = [...sets[btn.dataset.index].fragments].slice(0, 7 - activeFragments.length);
+               const tmpLevels= sets[btn.dataset.index].levels.sort((a, b) => parseInt(a.label) > parseInt(b.label) ? 1 : -1)
+               if(tmpLevels.length != 0){
+                  tmp = tmp.slice(0, tmpLevels[tmpLevels.length-1].required)
+               }
+               tmp.forEach(el=>{
+                  if(activeFragments.indexOf(el.toLowerCase()) == -1 && activeFragments.length < 7){
+                     activeFragments.push(el)
+                  }
+               })
                updateSets()
                updateTopBar()
                updateToggles()
@@ -219,10 +226,12 @@ function updateShowActive(toggleShowActive, setsList){
 
 function updateTopBar(){
    topBar.innerHTML = ''
+   var tmp = [...fragmentsList]
+   tmp.forEach((el,i) => tmp[i] = el.toLowerCase())
    activeFragments.forEach((activeFragment, i)=>{
-      var index = fragmentsList.indexOf(activeFragment)
+      var index = tmp.indexOf(activeFragment.toLowerCase())
       // topBar.innerHTML += `<img src="${index != -1 && fragmentsList[index].name != undefined ? fragmentsList[index].name : 'https://oldschool.runescape.wiki/images/Saradominist_Defence.png?d7645' }">`
-      topBar.innerHTML += `<img src="${fragmentsImages[i]}">`
+      topBar.innerHTML += `<img src="${fragmentsImages[index]}">`
    })
    for (let index = 0; index < 7 - activeFragments.length; index++) {
       topBar.innerHTML += `<div class="placeholder"></div>`
