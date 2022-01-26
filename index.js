@@ -179,7 +179,7 @@ function init(data){
       })
    })
    toggleShowActive.addEventListener('input', ()=>{
-      updateShowActive(toggleShowActive, setsList)
+      updateShowActive()
    })
    const allFrags = document.querySelectorAll(".fragment-name");
    const searchFrags = document.getElementById("search-frags")
@@ -215,10 +215,10 @@ function _unselectAll(){
    toggleList.forEach(el => el.classList.remove('active'))
    updateSets()
    updateTopBar()
-   updateShowActive(toggleShowActive, setsList)
+   updateShowActive()
 }
 
-function updateShowActive(toggleShowActive, setsList){
+function updateShowActive(){
    setsList.forEach(set=>{
       set.style.display = toggleShowActive.checked == false ? 'flex' : set.classList.contains('active') ? 'flex' : 'none'
    })
@@ -277,6 +277,7 @@ function createSetsHTML(sets){
 }
 
 function updateSets(){
+   updateShowActive()
    sets.forEach((set, i)=>{
       const levelSpan = setsList[i].querySelector('span.active-level')
       levelSpan.classList.remove('active')
