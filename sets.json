@@ -3,9 +3,10 @@
       "name": "Absolute Unit",
       "fragments": ["Dragon On A Bit", "Rune Escape", "Superior Tracking", "Armadylean Decree", "Divine Restoration", "Tactical Duelist", "Saradominist Defence", "Venomaster"],
       "description": "Players take 30%/50% less damage from monsters, with 50%/100% of post-reduction damage reflected back to the attacker.",
+      "image": "https://oldschool.runescape.wiki/images/Absolute_Unit_detail.png",
       "levels": [{
          "label": "2",
-         "required": 4
+         "required": 3
       }, {
          "label": "1",
          "required": 2
@@ -14,14 +15,16 @@
       "name": "The Alchemist",
       "fragments": ["Golden Brick Road", "Dine & Dash", "Slay All Day", "Certified Farmer", "Homewrecker", "Mixologist", "Just Druid!"],
       "description": "When cooking food, making jugs of wine, cleaning grimy herbs, or mixing potions, all items in the player's inventory will be processed at once and reward the full amount of experience.",
+      "image": "https://oldschool.runescape.wiki/images/The_Alchemist_detail.png",
       "levels": [{
          "label": "0",
-         "required": 4
+         "required": 3
       }]
    }, {
       "name": "Chain Magic",
       "fragments": ["Thrall Damage", "Unholy Wizard", "Zamorakian Sight", "Mother's Magic Fossils", "Deeper Pockets", "Rooty Tooty 2x Runeys", "Hot On The Trail"],
       "description": "Players have a 30%/60% chance to perform another magic attack after a successful hit with magic.",
+      "image": "https://oldschool.runescape.wiki/images/Chain_Magic_detail.png",
       "levels": [{
          "label": "2",
          "required": 3
@@ -33,14 +36,16 @@
       "name": "The Craftsman",
       "fragments": ["Rumple-Bow-String", "Dragon On A Bit", "Imcando's Apprentice", "Grave Robber", "Profletchional", "Pro Tips"],
       "description": "When smelting ores, smithing bars and cannonballs, crafting with leather, glass, uncut gems, pottery, battlestaves, spinning flax and wool, fletching logs and cutting bolt tips, all items in the player's inventory will be processed at once and reward the full amount of experience.",
+      "image": "https://oldschool.runescape.wiki/images/The_Craftsman_detail.png",
       "levels": [{
          "label": "0",
-         "required": 4
+         "required": 3
       }]
    }, {
       "name": "Double Tap",
       "fragments": ["Smithing Double", "Rumple-Bow-String", "Rogues' Chompy Farm", "Unholy Ranger", "Armadylean Decree", "Chinchonkers", "Pro Tips"],
       "description": "Players have a 30%/60% chance to perform another ranged attack after a successful hit with ranged.",
+      "image": "https://oldschool.runescape.wiki/images/Double_Tap_detail.png",
       "levels": [{
          "label": "2",
          "required": 3
@@ -52,9 +57,10 @@
       "name": "Drakan's Touch",
       "fragments": ["Unholy Wizard", "Zamorakian Sight", "Clued In", "Unholy Ranger", "Praying Respects", "Larger Recharger", "Special Discount"],
       "description": "Successful hits have a 50% chance of restoring the player's hitpoints by 5%/10% of the damage dealt.",
+      "image": "https://oldschool.runescape.wiki/images/Drakan's_Touch_detail.png",
       "levels": [{
          "label": "2",
-         "required": 4
+         "required": 3
       }, {
          "label": "1",
          "required": 2
@@ -63,14 +69,16 @@
       "name": "Endless Knowledge",
       "fragments": ["Arcane Conduit", "Thrall Damage", "Enchanted Jeweler", "Alchemaniac", "Imcando's Apprentice", "Plank Stretcher", "Mother's Magic Fossils"],
       "description": "Players receive an arcane grimoire from The Sage, which allows the ability to freely switch spellbooks anywhere.",
+      "image": "https://oldschool.runescape.wiki/images/Endless_Knowledge_detail.png",
       "levels": [{
          "label": "0",
-         "required": 4
+         "required": 3
       }]
    }, {
       "name": "Fast Metabolism",
       "fragments": ["Grave Robber", "Rock Solid", "Bandosian Might", "Larger Recharger", "Hot On The Trail", "Venomaster"],
       "description": "Hitpoint regeneration is increased by x4.",
+      "image": "https://oldschool.runescape.wiki/images/Fast_Metabolism_detail.png",
       "levels": [{
          "label": "0",
          "required": 3
@@ -79,20 +87,22 @@
       "name": "Greedy Gatherer",
       "fragments": ["Message In A Bottle", "Molten Miner", "Rock Solid", "Certified Farmer", "Chef's Catch", "Slash & Burn", "Just Druid!"],
       "description": "Players will receive 2x/3x the resources (with full experience) from Fishing, Woodcutting, Mining, and Farming.",
+      "image": "https://oldschool.runescape.wiki/images/Greedy_Gatherer_detail.png",
       "levels": [{
          "label": "2",
-         "required": 4
+         "required": 3
       }, {
          "label": "1",
-         "required": 3
+         "required": 2
       }]
    }, {
       "name": "Knife's Edge",
       "fragments": ["Barbarian Pest Wars", "Message In A Bottle", "Slay All Day", "Bottomless Quiver", "Livin' On A Prayer", "Praying Respects", "Unholy Warrior", "Saradominist Defence"],
       "description": "Players will deal 0.3%/0.6% additional damage for every hitpoint missing.",
+      "image": "https://oldschool.runescape.wiki/images/Knife's_Edge_detail.png",
       "levels": [{
          "label": "2",
-         "required": 4
+         "required": 3
       }, {
          "label": "1",
          "required": 2
@@ -101,17 +111,19 @@
       "name": "Last Recall",
       "fragments": ["Enchanted Jeweler", "Rune Escape", "Clued In", "Slay 'n' Pay", "Superior Tracking", "Chinchonkers", "Homewrecker", "Profletchional", "Rooty Tooty 2x Runeys", "Smooth Criminal"],
       "description": "Players receive a crystal of memories from The Sage, which allows them to teleport themselves back to the location where their most recent teleport occurred, with some caveats regarding its usage.",
+      "image": "https://oldschool.runescape.wiki/images/Last_Recall_(Shattered_Relics)_detail.png",
       "levels": [{
          "label": "0",
-         "required": 5
+         "required": 4
       }]
    }, {
       "name": "Personal Banker",
       "fragments": ["Smithing Double", "Alchemaniac", "Molten Miner", "Seedy Business", "Catch Of The Day", "Deeper Pockets"],
       "description": "Resources obtained from Fishing, Woodcutting, Mining, and Farming have a 50%/100% chance to be deposited directly to the player's bank. ",
+      "image": "https://oldschool.runescape.wiki/images/Personal_Banker_detail.png",
       "levels": [{
          "label": "2",
-         "required": 4
+         "required": 3
       }, {
          "label": "1",
          "required": 2
@@ -120,6 +132,7 @@
       "name": "Trailblazer",
       "fragments": ["Arcane Conduit", "Golden Brick Road", "Bottomless Quiver", "Seedy Business", "Chef's Catch", "Smooth Criminal", "Unholy Warrior"],
       "description": "Players receive a portable waystone from The Sage, which can teleport to other waystones.",
+      "image": "https://oldschool.runescape.wiki/images/Trailblazer_detail.png",
       "levels": [{
          "label": "0",
          "required": 3
@@ -128,6 +141,7 @@
       "name": "Twin Strikes",
       "fragments": ["Barbarian Pest Wars", "Slay 'n' Pay", "Divine Restoration", "Livin' On A Prayer", "Tactical Duelist", "Bandosian Might", "Special Discount"],
       "description": "Players have a 30%/60% chance to perform another melee attack after a successful hit with melee.",
+      "image": "https://oldschool.runescape.wiki/images/Twin_Strikes_detail.png",
       "levels": [{
          "label": "2",
          "required": 3
@@ -139,6 +153,7 @@
       "name": "Unchained Talent",
       "fragments": ["Plank Stretcher", "Rogues' Chompy Farm", "Dine & Dash", "Catch Of The Day", "Slash & Burn", "Mixologist"],
       "description": "All non-combat skills are permanently boosted by +8. This boost is not limited to unlocked skills.",
+      "image": "https://oldschool.runescape.wiki/images/Unchained_Talent_detail.png",
       "levels": [{
          "label": "0",
          "required": 3
