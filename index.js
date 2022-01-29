@@ -2,6 +2,7 @@ const fragContainer = document.querySelector('.frags')
 const setsContainer = document.querySelector('.sets-list')
 const topBar = document.querySelector('.set-state')
 const toggleShowActive = document.querySelector('.show-active input')
+const toggleLimit = document.querySelector('.toggle-limit input')
 const closePopup = document.querySelector('.popup-infos .close')
 const popup = document.querySelector('.popup-infos')
 
@@ -20,11 +21,12 @@ var sets
 var unselectAll
 var presetsList = []
 var activePreset = null
-
+var limit = 7 
 var save = getCookie('save') ? JSON.parse(getCookie('save')) : {}
 if(save.activeFragments) activeFragments = save.activeFragments
 if(save.presetsList) presetsList = save.presetsList
 if(save.activePreset) activePreset = save.activePreset
+if(save.limit) limit = save.limit
 
 tippy("footer a", {
    content: "Visit my Github profile !"
@@ -43,7 +45,7 @@ function init(data){
    toggleList = document.querySelectorAll('.frags .toggle')
    toggleList.forEach((toggle, i)=>{
       toggle.addEventListener('click', ()=>{
-         if(activeFragments.indexOf(fragmentsList[i].toLowerCase()) == -1 && activeFragments.length < 7){
+         if(activeFragments.indexOf(fragmentsList[i].toLowerCase()) == -1 && activeFragments.length < limit){
             // Adding
             activeFragments.push(fragmentsList[i].toLowerCase())
             toggle.classList.add('active')
@@ -73,7 +75,7 @@ function init(data){
                   tmp = tmp.slice(0, tmpLevels[tmpLevels.length-1].required)
                }
                tmp.forEach(el=>{
-                  if(activeFragments.indexOf(el.toLowerCase()) == -1 && activeFragments.length < 7){
+                  if(activeFragments.indexOf(el.toLowerCase()) == -1 && activeFragments.length < limit){
                      activeFragments.push(el)
                   }
                })
@@ -181,6 +183,20 @@ function init(data){
    toggleShowActive.addEventListener('input', ()=>{
       updateShowActive()
    })
+   toggleLimit.addEventListener('input', () => {
+      if(toggleLimit.checked){
+         limit = 7
+         document.body.classList.add('limit')
+         activeFragments = activeFragments.slice(0, 7)
+         updateTopBar()
+         updateSets()
+         updateToggles()
+      }else{
+         limit = 9999
+         updateTopBar()
+         document.body.classList.remove('limit')
+      }
+   })
    const allFrags = document.querySelectorAll(".fragment-name");
    const searchFrags = document.getElementById("search-frags")
    searchFrags.addEventListener("input", (e) => {
@@ -204,6 +220,15 @@ function init(data){
          const option = new Option(preset.name, preset.id, false, activePreset != null ? activePreset.id == preset.id ? true : false : false)
          presetSelect.appendChild(option)
       })
+   }
+   if(limit == 7){
+      document.body.classList.add('limit')
+      activeFragments = activeFragments.slice(0, 7)
+   }else{
+      updateTopBar()
+      toggleLimit.checked = false
+      limit = 9999
+      document.body.classList.remove('limit')
    }
    updateTopBar()
    updateSets()
@@ -233,8 +258,10 @@ function updateTopBar(){
       // topBar.innerHTML += `<img src="${index != -1 && fragmentsList[index].name != undefined ? fragmentsList[index].name : 'https://oldschool.runescape.wiki/images/Saradominist_Defence.png?d7645' }">`
       topBar.innerHTML += `<img src="${fragmentsImages[index]}">`
    })
-   for (let index = 0; index < 7 - activeFragments.length; index++) {
-      topBar.innerHTML += `<div class="placeholder"></div>`
+   if(limit == 7){
+      for (let index = 0; index < limit - activeFragments.length; index++) {
+         topBar.innerHTML += `<div class="placeholder"></div>`
+      }
    }
 }
 
@@ -271,6 +298,7 @@ function createSetsHTML(sets){
    sets.forEach((set, i)=>{
       setsContainer.innerHTML += `<div title="${set.name}" id="set_${i}" class="set">
       <img src="${set.image}" alt="">
+      <p>${set.name}</p>
       <span class="active-level"></span>
    </div>`
    })
@@ -282,6 +310,7 @@ function updateSets(){
       const levelSpan = setsList[i].querySelector('span.active-level')
       levelSpan.classList.remove('active')
       setsList[i].classList.remove('active')
+      setsList[i].classList.remove('orange')
       // To lowercase
       var setFrags = set.fragments
       setFrags.forEach((frag, i)=>setFrags[i] = setFrags[i].toLowerCase())
@@ -297,14 +326,21 @@ function updateSets(){
                setsList[i].classList.add('active')
                activeLevel = level.label
             }
+            if(iSet == 0 && lowerCaseActive.length == level.required - 1){
+               setsList[i].classList.add('orange')
+            }
          })
          if(activeLevel && activeLevel > 1){
+            setsList[i].classList.remove('orange')
             levelSpan.classList.add('active')
             levelSpan.textContent = `${activeLevel}` 
          }
       }else if(lowerCaseActive.length == set.fragments.length){
          // Set activé mais aucun niveau
          setsList[i].classList.add('active')
+      }else if(lowerCaseActive.length == set.fragment.length-1){
+         // Set aucun niveau mais manque 1 fragment pour activer
+         setsList[i].classList.add('orange')
       }else{
          // Set non activé...
       }
@@ -316,6 +352,10 @@ function updateSets(){
       set.tippyInstance[0].setContent(instanceContent)   
    })
    activateSetsButtons = document.querySelectorAll('.activate-set')
+   save.activeFragments = activeFragments
+   save.presetsList = presetsList
+   save.activePreset = activePreset
+   save.limit = limit
    setCookie('save', JSON.stringify(save), 365)
 }
 
